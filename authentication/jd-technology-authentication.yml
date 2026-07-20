@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.jdcloud.com/cn/common-declaration/api/introduction
+notes: >-
+  JD Cloud OpenAPI is not documented via an OpenAPI securityScheme in this repo
+  (no spec harvested yet); this profile is captured from the JD Cloud OpenAPI
+  documentation and CLI. JD Cloud uses an AWS-style request-signature scheme
+  rather than a bearer token or OAuth.
+summary:
+  types:
+  - requestSignature
+  api_key_in:
+  - header
+  oauth2_flows: []
+schemes:
+- name: JDCloudSignature
+  type: requestSignature
+  description: >-
+    Requests to <service>.jdcloud-api.com are signed with an access-key (AK) and
+    secret-key (SK) pair issued from the JD Cloud console. The client computes an
+    HMAC signature over the canonical request and passes it, together with the
+    access key and timestamp, in request headers. Dedicated per-language signer
+    utilities (jdcloud-sdk-*-signer) implement the algorithm; the SDKs and jdc CLI
+    sign automatically.
+  credential_source: JD Cloud console (access-key / secret-key)
+  signers:
+  - https://github.com/jdcloud-api/jdcloud-sdk-java-signer
+  - https://github.com/jdcloud-api/jdcloud-sdk-go-signer
+  - https://github.com/jdcloud-api/jdcloud-sdk-nodejs-signer
+  - https://github.com/jdcloud-api/jdcloud-sdk-net-signer
+  - https://github.com/jdcloud-api/jdcloud-sdk-php-signer
+  - https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
+  - https://github.com/jdcloud-api/jdcloud-sdk-rust-signer
+- name: MFAOperationToken
+  type: apiKey
+  in: header
+  parameter: x-jdcloud-security-token
+  description: >-
+    MFA / operation-protection token required when calling operations protected by
+    multi-factor operation protection. Passed as an additional header alongside the
+    request signature.
