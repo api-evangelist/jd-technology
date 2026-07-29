@@ -1,8 +1,27 @@
 aid: jd-technology
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jd-technology.png
 name: JD Technology
-description: 'JD Technology is a company surfaced as a portfolio company of hongshan and added to the
-  API Evangelist network as a stub for enrichment. Sector: technology. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'JD Technology Group (京东科技集团) is the technology and cloud subsidiary of
+  JD.com, delivering digital-transformation services to government, financial institutions,
+  and enterprises. Its primary developer surface is JD Cloud (京东云), a full-stack public
+  cloud offering compute, storage, databases, networking, AI, security, and industry
+  solutions exposed through the JD Cloud OpenAPI. Developers integrate via signed
+  (access-key / secret-key) OpenAPI calls to per-service endpoints, and JD Technology
+  publishes first-party SDKs for Java, Go, Python, PHP, .NET, Node.js and iOS plus
+  a cross-platform command line (jdc) on GitHub. This profile was surfaced as a portfolio
+  company of hongshan and enriched from JD Technology''s public developer surfaces.'
 url: https://raw.githubusercontent.com/api-evangelist/jd-technology/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,13 +31,68 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Technology
-apis: []
+- Cloud
+- Cloud Computing
+- Infrastructure
+- Fintech
+- Artificial Intelligence
+- Developer Platform
+- OpenAPI
+- China
+apis:
+- name: JD Cloud OpenAPI
+  description: 'JD Cloud OpenAPI is the programmatic control plane for JD Technology''s
+    public cloud — compute (VM), storage, databases (RDS), networking, containers,
+    CDN, AI and security services. Each product exposes REST operations at a per-service
+    host (<service>.jdcloud-api.com) authenticated with an access-key / secret-key
+    request signature; the jdc CLI and language SDKs wrap the same OpenAPI.'
+  humanURL: https://docs.jdcloud.com/cn/common-declaration/api/introduction
+  baseURL: https://vm.jdcloud-api.com
+  tags:
+  - Cloud
+  - OpenAPI
+  - Infrastructure
+  properties:
+  - type: Documentation
+    url: https://docs.jdcloud.com/cn/
+  - type: APIReference
+    url: https://docs.jdcloud.com/cn/common-declaration/api/introduction
+common:
+- type: DeveloperPortal
+  url: https://developer.jdcloud.com/
+- type: Documentation
+  url: https://docs.jdcloud.com/cn/
+- type: APIReference
+  url: https://docs.jdcloud.com/cn/common-declaration/api/introduction
+- type: Website
+  url: https://www.jdt.com.cn/
+- type: GitHubOrganization
+  url: https://github.com/jdcloud-api
+- type: SignUp
+  url: https://login.jdcloud.com/
+- type: Packages
+  url: packages/jd-technology-packages.yml
+- type: SDKs
+  url: packages/jd-technology-packages.yml
+- type: CLI
+  url: cli/jd-technology-cli.yml
+- type: Authentication
+  url: authentication/jd-technology-authentication.yml
+- type: DomainSecurity
+  url: security/jd-technology-domain-security.yml
+- type: LLMsTxt
+  url: llms/jd-technology-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

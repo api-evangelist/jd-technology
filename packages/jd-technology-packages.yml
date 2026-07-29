@@ -1,0 +1,113 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/jdcloud-api
+notes: >-
+  First-party JD Cloud (JD Technology) OpenAPI client libraries and signer
+  utilities. All published under the official jdcloud-api GitHub organization;
+  where a public package-registry release exists it is recorded, otherwise the
+  canonical source is the GitHub repo. Signer-only helper libraries (request
+  signature) are listed separately from full SDKs.
+packages:
+- language: python
+  registry: pypi
+  name: jdcloud-sdk
+  version: 1.6.328
+  url: https://pypi.org/project/jdcloud-sdk/
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-python
+  install: pip install jdcloud-sdk
+  official: true
+  kind: sdk
+- language: python
+  registry: pypi
+  name: jdcloud-cli
+  version: 1.2.12
+  url: https://pypi.org/project/jdcloud-cli/
+  repo: https://github.com/jdcloud-api/jdcloud-cli
+  install: pip install -U jdcloud_cli
+  official: true
+  kind: cli
+- language: java
+  registry: maven
+  name: com.jdcloud:jcq-java-sdk
+  version: 1.3.5
+  url: https://search.maven.org/artifact/com.jdcloud/jcq-java-sdk
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-java
+  official: true
+  kind: sdk
+- language: dotnet
+  registry: nuget
+  name: JDCloudSDK.Core
+  version: 0.2.12
+  url: https://www.nuget.org/packages/JDCloudSDK.Core
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-net
+  install: dotnet add package JDCloudSDK.Core
+  official: true
+  kind: sdk
+  notes: >-
+    .NET SDK is published to NuGet as per-service packages under the JDCloudSDK.*
+    namespace (JDCloudSDK.Common, JDCloudSDK.Charge, JDCloudSDK.Rds, JDCloudSDK.Disk, ...).
+- language: go
+  registry: github
+  name: jdcloud-sdk-go
+  url: https://github.com/jdcloud-api/jdcloud-sdk-go
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-go
+  install: go get github.com/jdcloud-api/jdcloud-sdk-go
+  official: true
+  kind: sdk
+- language: php
+  registry: github
+  name: jdcloud-sdk-php
+  url: https://github.com/jdcloud-api/jdcloud-sdk-php
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-php
+  official: true
+  kind: sdk
+- language: javascript
+  registry: github
+  name: jdcloud-sdk-nodejs
+  url: https://github.com/jdcloud-api/jdcloud-sdk-nodejs
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-nodejs
+  official: true
+  kind: sdk
+- language: swift
+  registry: github
+  name: jdcloud-sdk-ios
+  url: https://github.com/jdcloud-api/jdcloud-sdk-ios
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-ios
+  official: true
+  kind: sdk
+- language: objective-c
+  registry: github
+  name: jdcloud-sdk-ios-oc
+  url: https://github.com/jdcloud-api/jdcloud-sdk-ios-oc
+  repo: https://github.com/jdcloud-api/jdcloud-sdk-ios-oc
+  official: true
+  kind: sdk
+signers:
+- language: cpp
+  name: jdcloud-sdk-cpp-signer
+  url: https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
+  official: true
+- language: php
+  name: jdcloud-sdk-php-signer
+  url: https://github.com/jdcloud-api/jdcloud-sdk-php-signer
+  official: true
+- language: javascript
+  name: jdcloud-sdk-nodejs-signer
+  url: https://github.com/jdcloud-api/jdcloud-sdk-nodejs-signer
+  official: true
+- language: dotnet
+  name: jdcloud-sdk-net-signer
+  url: https://github.com/jdcloud-api/jdcloud-sdk-net-signer
+  official: true
+- language: java
+  name: jdcloud-sdk-java-signer
+  url: https://github.com/jdcloud-api/jdcloud-sdk-java-signer
+  official: true
+- language: go
+  name: jdcloud-sdk-go-signer
+  url: https://github.com/jdcloud-api/jdcloud-sdk-go-signer
+  official: true
+- language: rust
+  name: jdcloud-sdk-rust-signer
+  url: https://github.com/jdcloud-api/jdcloud-sdk-rust-signer
+  official: true

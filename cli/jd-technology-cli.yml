@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/jdcloud-api/jdcloud-cli
+name: JD Cloud CLI
+binary: jdc
+description: >-
+  The JD Cloud CLI (京东云CLI) provides command-line access to JD Technology's cloud
+  resources. It is built on Python and the JD Cloud Python SDK, and exposes one
+  command group per cloud product, each wrapping the corresponding JD Cloud OpenAPI
+  operations. Cross-platform (Linux, macOS, Windows via Git Bash) with tab
+  auto-completion.
+repo: https://github.com/jdcloud-api/jdcloud-cli
+package: https://pypi.org/project/jdcloud-cli/
+docs: https://docs.jdcloud.com/cn/common-declaration/api/introduction
+requires: Python 2.7 or 3.x + pip
+install:
+- method: pip
+  command: pip install -U jdcloud_cli
+- method: source
+  command: python setup.py install
+auth:
+  command: jdc configure add --access-key your-ak --secret-key your-sk
+  model: access-key / secret-key (obtained from the JD Cloud console)
+  defaults:
+    region: north (华北)
+    scheme: http
+    timeout: 20s
+  flags:
+  - --region-id
+  - --scheme
+  - --timeout
+usage: jdc [options] command sub-command [--parameters values]
+commands:
+- group: vm
+  description: Virtual machine / compute instances (e.g. jdc vm describe-instances)
+- group: nc
+  description: Native container operations
+- group: rds
+  description: Relational database service
+- group: disk
+  description: Cloud disk / block storage
+notes: >-
+  Product command groups map 1:1 to JD Cloud OpenAPI service namespaces; the set
+  above is representative (verified from the CLI README examples) — the full group
+  list tracks the OpenAPI product catalog. `generate-skeleton` produces request
+  JSON templates (e.g. jdc vm generate-skeleton --api create-instances). Extra
+  headers, including x-jdcloud-security-token for MFA-protected operations, are
+  passed with --headers.
+key_flows:
+- name: configure credentials
+  command: jdc configure add --access-key AK --secret-key SK
+- name: generate request skeleton
+  command: jdc vm generate-skeleton --api create-instances
+- name: call with MFA security token
+  command: jdc nc delete-container --headers '{"x-jdcloud-security-token":"xxx"}' --container-id xxxxx
