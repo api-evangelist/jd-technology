@@ -64,16 +64,89 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-JD Technology Group (京东科技集团) is the cloud and technology subsidiary of JD.com, delivering digital-transformation services to government, financial institutions, and enterprises. Its primary developer surface is **JD Cloud (京东云)**, a full-stack public cloud whose **JD Cloud OpenAPI** exposes compute, storage, databases, networking, AI, and security services.
+JD Technology Group (京东科技集团) is the technology and cloud subsidiary of JD.com, delivering digital-transformation services to government, financial institutions, and enterprises. Its primary developer surface is JD Cloud (京东云), a full-stack public cloud offering compute, storage, databases, networking, AI, security, and industry solutions exposed through the JD Cloud OpenAPI. Developers integrate via signed (access-key / secret-key) OpenAPI calls to per-service endpoints, and JD Technology publishes first-party SDKs for Java, Go, Python, PHP, .NET, Node.js and iOS plus a cross-platform command line (jdc) on GitHub. This profile was surfaced as a portfolio company of hongshan and enriched from JD Technology's public developer surfaces.
 
-Developers integrate via access-key / secret-key **signed** REST calls to per-service endpoints (`<service>.jdcloud-api.com`). JD Technology publishes first-party SDKs (Java, Go, Python, PHP, .NET, Node.js, iOS) and the `jdc` command line under the [`jdcloud-api`](https://github.com/jdcloud-api) GitHub organization.
+**Areas:** Company · Technology · Cloud · Cloud Computing · Infrastructure · Fintech · Artificial Intelligence · Developer Platform · OpenAPI · China
 
-- Corporate: https://www.jdt.com.cn/
-- JD Cloud: https://www.jdcloud.com/
-- Developer community: https://developer.jdcloud.com/
-- Documentation: https://docs.jdcloud.com/cn/
-- OpenAPI & SDK reference: https://docs.jdcloud.com/cn/common-declaration/api/introduction
+## JD Technology on APIs.io
 
-Backed by: hongshan
+Everything profiled for JD Technology is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/jd-technology/](https://apis.io/providers/jd-technology/)** — or go straight to one of the APIs or properties below.
 
-_Surfaced as a portfolio company of hongshan and enriched from JD Technology's public developer surfaces by the API Evangelist enrichment pipeline._
+### APIs (1)
+
+- [JD Cloud OpenAPI](https://apis.io/apis/jd-technology/jd-cloud-openapi/) — JD Cloud OpenAPI is the programmatic control plane for JD Technology's public cloud — compute (VM), storage, databases (RDS), networking, containers, CDN,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Jd Technology Authentication](https://apis.io/security/jd-technology/jd-technology-authentication/)
+- [Jd Technology Domain Security](https://apis.io/security/jd-technology/jd-technology-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.jdt.com.cn/)
+- [Documentation](https://docs.jdcloud.com/cn/)
+- [API reference](https://docs.jdcloud.com/cn/common-declaration/api/introduction)
+- [Sign up](https://login.jdcloud.com/)
+- [Blog](https://www.jdt.com.cn/blog/)
+- [GitHub](https://github.com/jdcloud-api)
+
+## API Evangelist rating
+
+**Kin Score 12.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 0.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/jd-technology/](https://apis.io/providers/jd-technology/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for JD Technology: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/jd-technology/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
